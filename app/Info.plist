@@ -51,7 +51,7 @@
 		<!-- NSAllowsLocalNetworking must NOT be added back beside this.
 		     It is one of the keys iOS 10 introduced, and the presence of any
 		     of them makes NSAllowsArbitraryLoads be ignored on iOS 10 and
-		     later -- it is kept only for older systems. The two together
+		     later — it is kept only for older systems. The two together
 		     therefore read as "allow everything" and mean "allow local
 		     networking and the exception domains below", which is how plain
 		     HTTP to a public host came to fail in the app while HTTPS and
@@ -59,7 +59,7 @@
 		     two, so nothing is lost by letting it apply.
 
 		     Xcode rewrites this file alphabetically when it edits it, and it
-		     drops XML comments when it does -- this one was lost that way
+		     drops XML comments when it does — this one was lost that way
 		     once already. If it goes missing again, put it back. -->
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
@@ -193,5 +193,7 @@
 	</array>
 	<key>fuc</key>
 	<string>ICON_STUFF</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 </dict>
 </plist>

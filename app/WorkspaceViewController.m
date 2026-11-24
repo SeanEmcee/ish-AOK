@@ -15498,6 +15498,11 @@ static NSString *ISHBrowserMIMETypeForPath(NSString *path) {
 
 - (WKWebView *)buildBrowserWebView {
     WKWebViewConfiguration *configuration = [WKWebViewConfiguration new];
+    if (@available(iOS 17.0, *)) {
+        configuration.preferences.inactiveSchedulingPolicy =
+            WKInactiveSchedulingPolicyNone;
+    }
+
     // aokfile:///path reads the guest's files, so a local page's relative
     // links (its CSS, images, other pages) resolve to guest files too.
     [configuration setURLSchemeHandler:ISHBrowserGuestFileSchemeHandler.shared forURLScheme:@"aokfile"];
