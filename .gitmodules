@@ -16,7 +16,7 @@
 	branch = main
 [submodule "deps/zsh"]
 	path = deps/zsh
-	url = https://github.com/emkey1/zsh.git
+	url = https://github.com/SeanEmcee/aok-zsh.git
 	branch = ish-aok
 [submodule "deps/helix"]
 	path = deps/helix
